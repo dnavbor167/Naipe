@@ -10,7 +10,7 @@ package daw;
  */
 public class Naipe {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    //Creamos los atributos encapsulados
+    private int numCarta;
+    private Palo palo;
 }
