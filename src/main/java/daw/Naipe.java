@@ -42,4 +42,33 @@ public class Naipe {
         }
         this.palo = palo;
     }
+    
+    //Cremos los getter
+    public int getNumCarta() {
+        return numCarta;
+    }
+
+    public Palo getPalo() {
+        return palo;
+    }
+    
+
+    //Creamos los setters
+    public void setNumCarta(int numCarta) {
+        this.numCarta = numCarta;
+    }
+
+    //Creamos el toString
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Naipe{");
+        sb.append("numCarta=").append(numCarta);
+        sb.append(", palo=").append(palo);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+    
 }
