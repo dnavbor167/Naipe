@@ -63,7 +63,17 @@ public class Naipe {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Naipe{");
-        sb.append("numCarta=").append(numCarta);
+        //Hacemos que si escoge un número del 8 al 10 muestre un String
+        //con el nombre de la carta
+        if(numCarta == 8){
+            sb.append("numCarta=").append("Sota");
+        } else if(numCarta == 9){
+            sb.append("numCarta=").append("Caballo");
+        } else if(numCarta == 10){
+            sb.append("numCarta=").append("Rey");
+        } else {
+            sb.append("numCarta=").append(numCarta);
+        }
         sb.append(", palo=").append(palo);
         sb.append('}');
         return sb.toString();
