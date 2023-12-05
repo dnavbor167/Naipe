@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
  */
-package daw;
+package partea;
 
 /**
  *
@@ -10,16 +10,12 @@ package daw;
  */
 public enum Palo {
     //Creamos los enum de palo
-    OROS("Carta de oro"), 
-    BASTOS("Carta de bastos"), 
-    ESPADAS("Carta de espadas"), 
-    COPAS("Carta de copas");
+    OROS, 
+    BASTOS, 
+    ESPADAS, 
+    COPAS;
     
-    private String descripcionPalo;
 
-    private Palo(String descripcionPalo) {
-        this.descripcionPalo = descripcionPalo;
-    }
 
     public static Palo getOROS() {
         return OROS;
@@ -36,11 +32,5 @@ public enum Palo {
     public static Palo getCOPAS() {
         return COPAS;
     }
-
-    public String getDescripcionPalo() {
-        return descripcionPalo;
-    }
-    
-    
-    
+       
 }

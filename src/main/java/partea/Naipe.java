@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package daw;
+package partea;
 
 import java.util.Random;
 
@@ -13,7 +13,7 @@ public class Naipe {
 
     //Creamos los atributos encapsulados
     private int numCarta;
-    private Palo palo;
+    private final Palo palo;
     //Creamos un constructor para Palo en array
     private final Palo[] paloArray = Palo.values();
 
@@ -55,7 +55,12 @@ public class Naipe {
 
     //Creamos los setters
     public void setNumCarta(int numCarta) {
-        this.numCarta = numCarta;
+        
+        //Hacemos un condicional para que en el caso de que quiera cambiar
+        //el numero de la carta no pueda
+        if(numCarta>1&&numCarta<11){
+            this.numCarta = numCarta;
+        }
     }
 
     //Creamos el toString
@@ -65,14 +70,11 @@ public class Naipe {
         sb.append("Naipe{");
         //Hacemos que si escoge un número del 8 al 10 muestre un String
         //con el nombre de la carta
-        if(numCarta == 8){
-            sb.append("numCarta=").append("Sota");
-        } else if(numCarta == 9){
-            sb.append("numCarta=").append("Caballo");
-        } else if(numCarta == 10){
-            sb.append("numCarta=").append("Rey");
-        } else {
-            sb.append("numCarta=").append(numCarta);
+        switch (numCarta) {
+            case 8 -> sb.append("numCarta=").append("Sota");
+            case 9 -> sb.append("numCarta=").append("Caballo");
+            case 10 -> sb.append("numCarta=").append("Rey");
+            default -> sb.append("numCarta=").append(numCarta);
         }
         sb.append(", palo=").append(palo);
         sb.append('}');
