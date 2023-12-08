@@ -39,6 +39,14 @@ public class Main {
             System.out.println(naipes2[i]);
 
         }
+        
+        System.out.println("""
+                           \n------------------------
+                           Barajar:
+                           ------------------------
+                           """);
+        
+        Baraja.barajar(2);
     }
 
 }
